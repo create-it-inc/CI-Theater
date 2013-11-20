@@ -12,6 +12,6 @@
     <com.typesafe.akka-actor.version>2.1.0</com.typesafe.akka-actor.version>
   </properties>
   <modules>
-    <module>assets-postprocess</module>
+    <module>assets</module>
   </modules>
 </project>
