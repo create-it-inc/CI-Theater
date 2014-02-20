@@ -68,17 +68,17 @@ public class TextOverlayProcessor implements ImageProcessor {
 	}
 
 	@Override
-	public void process(BufferedImage image) {
+	public BufferedImage process(BufferedImage image) {
 		// if there is no text, then nothing to do
 		if ("".equals(this.text) || this.text == null) {
-			return;
+			return null;
 		}
 
 		imageHeight = image.getHeight();
 		imageWidth = image.getWidth();
 		// if the image is too small, don't do anything
 		if (imageWidth < 5 || imageHeight < 5) {
-			return;
+			return null;
 		}
 
 		Graphics2D g2 = image.createGraphics();
@@ -89,6 +89,7 @@ public class TextOverlayProcessor implements ImageProcessor {
 		} finally {
 			g2.dispose();
 		}
+		return image;
 	}
 
 	private void init(BufferedImage image, Graphics2D g2) {

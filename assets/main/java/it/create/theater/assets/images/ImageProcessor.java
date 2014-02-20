@@ -5,6 +5,6 @@ import java.io.Serializable;
 
 public interface ImageProcessor extends Serializable {
 
-	public void process(BufferedImage image);
+	public BufferedImage process(BufferedImage image);
 
 }
